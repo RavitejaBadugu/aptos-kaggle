@@ -1,0 +1,5 @@
+outs:
+- md5: 924347b5f05b4c2a9a80e452e0eea873.dir
+  size: 592964268
+  nfiles: 3
+  path: serving
