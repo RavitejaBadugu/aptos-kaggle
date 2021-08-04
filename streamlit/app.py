@@ -11,7 +11,7 @@ URL='http://model_server:8000/v1/models/densenet:predict'
 st.title('Welcome to this app')
 st.subheader('In this app we predict the chances of diabetic retinopathy')
 st.write('Basically it the kaggle competition task where I build the model.')
-st.write('This is the app to make my model enter into preduction')
+st.write('This is the app to prototype the production')
 
 st.markdown('** Below please upload the retina images taken using fundus photography **')
 
