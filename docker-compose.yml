@@ -1,0 +1,25 @@
+version: '3'
+services: 
+    stream_app:
+        build: ./streamlit/
+        depends_on: 
+            - tf_serving
+        ports: 
+            - 8501:8501
+        networks: 
+            - ecs_network
+        
+    tf_serving:
+        image: tensorflow/serving:latest
+        container_name: model_server
+        ports: 
+            - 8000:8000
+        networks: 
+            - ecs_network
+        volumes: 
+            - ./serving/models/:/models
+        command: --rest_api_port=8000 --model_base_path='/models/' --model_name='densenet'
+
+networks:
+    ecs_network:
+        driver: bridge
