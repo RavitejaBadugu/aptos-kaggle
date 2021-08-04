@@ -14,3 +14,6 @@ It gives the .dvc files.
 later run dvc pull. To get the models download.
 
 After downloading the models run docker-compose up --build.
+
+** home page of app **
+![Alt text](/images/home_page.png?raw=true)
